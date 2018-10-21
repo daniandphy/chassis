@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
 import time
 
-def change_pos(setmode,pos="neutral",servoPIN=29, rottime=1):
+def change_pos(setmode=GPIO.BOARD,pos="neutral",servoPIN=29, rottime=1):
    '''
-   this function change the position of servo to an assigned "pos"
+   change the position of servo to an assigned "pos"
    :param setmode: could be GPIO.BOARD or GPIO.BCM
    :param pos: neutral, left or right
    :param servoPIN: dedicated pin number on the raspberry pie
