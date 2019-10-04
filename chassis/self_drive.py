@@ -118,10 +118,9 @@ def self_drive_wkeyb():
             if char == ord('q'):
                 break
             elif char == curses.KEY_UP:
-
+                #print( "no_obstacle",no_obstacle())
                 while no_obstacle():
-                    forward()
-
+                  forward()
                 dist_dict = estimate_dist()
 
                 next_direction = max(dist_dict,key=dist_dict.get)
@@ -131,7 +130,7 @@ def self_drive_wkeyb():
                     turnl()
                 else:
                     backward()
-
+            
             elif char == curses.KEY_DOWN:
                 backward()
             elif char == curses.KEY_RIGHT:

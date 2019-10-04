@@ -20,10 +20,12 @@ lib64/
 parts/
 sdist/
 var/
+temp/
 wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+*.swp
 MANIFEST
 
 # PyInstaller

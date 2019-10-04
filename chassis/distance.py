@@ -2,7 +2,7 @@ import RPi.GPIO as gpio
 import time
 import numpy as np
 
-def get_distance(setmode=gpio.BOARD,TRIG=36,ECHO=37,max_wait_time=5):
+def get_distance(setmode=gpio.BOARD,TRIG=35,ECHO=37,max_wait_time=5):
    '''
    calculate the distance between the obstacle and ultrasonic sensor (US-015)
    :param setmode: could be GPIO.BOARD or GPIO.BCM
@@ -46,12 +46,12 @@ def get_distance(setmode=gpio.BOARD,TRIG=36,ECHO=37,max_wait_time=5):
 
 
 if __name__ == "__main__":
-    TRIG = 36
+    TRIG = 35
     ECHO = 37
     setmode=gpio.BOARD
     for i in range(20):
         start = time.time()
-        dist=get_distance(setmode,TRIG=36,ECHO=37)
+        dist=get_distance(setmode,TRIG=TRIG,ECHO=ECHO)
         print("disitance: {} CM".format(dist))
         end = time.time()
         print(end-start)
